@@ -1,0 +1,30 @@
+.calculadora {
+    border: solid #205025;
+    border-radius: 25px;
+    position: relative;
+    width: 200px;
+  }
+
+  .calculadora-screen {  
+     border-radius: 25px;
+    width: 70%;
+    height: 30px;
+    background-color: #000000;
+    color: #fff;
+    align-content: center;
+     display: grid;
+  }
+
+  button {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .calculadora-keys {
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    grid-gap: 20px;
+    padding: 25px;
+  }
+
+ 
