@@ -11,7 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+
+    mix.styles(['resources/views/jogo/css/styles.css'
+], 'public/jogo/css/styles.css')
+
+        .scripts(['resources/views/jogo/js/scripts.js'
+        ], 'public/jogo/js/scripts.js')
+
+        .version();
