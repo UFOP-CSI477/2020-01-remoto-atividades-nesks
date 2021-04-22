@@ -9,7 +9,7 @@ class Score extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['data', 'nivel', 'erros', 'acertos', 'premiacao'];
+    protected $fillable = ['nivel','premiacao','aluno_id','data','erros','acertos'];
 
     //1 score pertence a um aluno
     public function aluno(){

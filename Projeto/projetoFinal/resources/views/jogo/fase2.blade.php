@@ -31,11 +31,11 @@ var cont= 0;
 var errosTotais = 0;
 var acertosTotais = 0;
 var index= 0;
-var letra = @json($score->aluno->nome);
+var letra = [0,1,2,3,4,5,6,7,8,9];
 
 function tecla(){
     if(index<letra.length){
-        if(String.fromCharCode(event.keyCode)==letra[index].toLowerCase()){
+        if(String.fromCharCode(event.keyCode)==letra[index]){
             errosTotais = errosTotais + cont;
             acertosTotais++;
             cont=0;
@@ -63,7 +63,7 @@ function tecla(){
 }
 
 function teste(){
-    document.getElementById("letra").innerHTML=letra[index].toUpperCase();
+    document.getElementById("letra").innerHTML=letra[index];
 }
 
 teste();

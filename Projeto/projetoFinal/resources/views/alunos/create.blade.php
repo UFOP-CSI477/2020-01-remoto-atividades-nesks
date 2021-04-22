@@ -12,27 +12,23 @@
 
 
                    <div class="form-group col-sm-12">
-                       <label class="col-4">nivel:</label>
-                       <select class="form-control col-12" name="nivel" id="nivel">
-                           <option value="">Selecione:</option>
-                           <option value="1">1</option>
-                           <option value="2">2</option>
-                           <option value="3">3</option>
-                           <option value="4">4</option>
-                           <option value="5">5</option>
-                       </select>
+                       <label class="col-4">Idade:</label>
+                    <input type="number" id="nivel" name="nivel" class="nomeInput form-control"/>
                    </div>
 
+
                    <label>Personagem:</label>
-                    <input type="text" id="personagemInput" name="personagem" class="personagemInput form-control"/>
+                    <input type="text" id="personagemInput" name="personagem" class="personagemInput form-control" value="" />
+
 
                     <label>Link da imagem do personagem:</label>
-                    <input type="text" id="imgPersonagem" name="imgPersonagem" class="imgPersonagem form-control"/>
+                    <input type="text" id="imgPersonagem" name="imgPersonagem" class="imgPersonagem form-control" value=""/>
 
-                    <input class= "btn btn-dark col-4 float-left" type="submit" value="confirmar">
+                    <div class="row mt-3">
+                    <input class= "btn btn-dark col-4 m-2 float-left" type="submit" value="confirmar">
 
-                    <input class= "btn btn-dark col-4 float-left" type="reset" value="apagar">
-
+                    <input class= "btn btn-dark col-4 m-2 float-right" type="reset" value="apagar">
+                    </div>
                 </form>
 
 </div>

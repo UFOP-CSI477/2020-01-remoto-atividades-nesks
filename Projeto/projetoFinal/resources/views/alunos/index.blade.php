@@ -11,7 +11,7 @@
                             <tr>
                                 <th scope="col">id</th>
                                 <th scope="col">Nome</th>
-                                <th scope="col">Nivel</th>
+                                <th scope="col">Idade</th>
                                 <th scope="col">Personagem</th>
                                 <th scope="col">Imagem</th>
                             </tr>

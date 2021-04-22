@@ -7,10 +7,13 @@
 
 
 <div class="container">
+<div id="dropzone"><img src="https://st2.depositphotos.com/2435397/8050/i/600/depositphotos_80500414-stock-photo-old-cartoon-house.jpg" width=300 height=200></img></div>
+
   <div class="row justify-content-center align-items-center">
-    <h1 id="letra" class="text-center display-1"></h1>
+  <div id="drag_me"><img src="{{$score->aluno->imgPersonagem}}" width=150 height=100></img></div>
   </div>
-</div>
+
+  </div>
 
 
 <form id="formulario" action="{{route('scores.update',$score->id)}}" method="post" hidden >
@@ -31,22 +34,42 @@ var cont= 0;
 var errosTotais = 0;
 var acertosTotais = 0;
 var index= 0;
-var letra = @json($score->aluno->nome);
 
-function tecla(){
-    if(index<letra.length){
-        if(String.fromCharCode(event.keyCode)==letra[index].toLowerCase()){
-            errosTotais = errosTotais + cont;
-            acertosTotais++;
-            cont=0;
-            index++;
-            if(index!=letra.length){
-                if(letra[index]==" "){
-                    index++;
-                }
-            teste();
-            }else{
-              var data = new Date(),
+var dragMe = document.getElementById("drag_me"),
+  /* o x inicial do drag*/
+  dragOfX = 0,
+  /* o y inicial do drag */
+  dragOfY = 0;
+
+/* ao segurar o elemento */
+function dragStart(e) {
+    /* define o x inicial do drag */
+    dragOfX = e.pageX - dragMe.offsetLeft;
+    /* define o y inicial do drag */
+    dragOfY = e.pageY - dragMe.offsetTop;
+
+    acertosTotais++;
+    /* adiciona os eventos */
+    addEventListener("mousemove", dragMove);
+    addEventListener("mouseup", dragEnd);
+}
+
+/* ao ser arrastado */
+function dragMove(e) {
+    /* atualiza a posição do elemento */
+    dragMe.style.left = (e.pageX - dragOfX) + 'px';
+    dragMe.style.top = (e.pageY - dragOfY) + 'px';
+}
+
+/* ao terminar o drag */
+function dragEnd() {
+    /* remove os eventos */
+
+    errosTotais++;
+    removeEventListener("mousemove", dragMove);
+    removeEventListener("mouseup", dragEnd);
+
+    var data = new Date(),
              dia  = data.getDate().toString().padStart(2, '0'),
              mes  = (data.getMonth()+1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
              ano  = data.getFullYear();
@@ -55,19 +78,11 @@ function tecla(){
                 document.getElementById("erros").value=errosTotais;
                 document.getElementById("acertos").value=acertosTotais;
                 document.getElementById("formulario").submit();
-            }
-        }else{
-        cont++;
-        }
-    }
+
 }
 
-function teste(){
-    document.getElementById("letra").innerHTML=letra[index].toUpperCase();
-}
-
-teste();
-document.body.onkeypress = tecla;
+/* adiciona o evento que começa o drag */
+dragMe.addEventListener("mousedown", dragStart);
 
 
 

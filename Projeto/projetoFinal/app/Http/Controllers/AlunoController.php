@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aluno;
+
 use Illuminate\Http\Request;
 
 class AlunoController extends Controller
@@ -93,6 +94,7 @@ class AlunoController extends Controller
     {
 
 
+        $aluno->scores()->delete();
         $aluno->delete();
         session()->flash('mensagem', "Excluido com sucesso!");
         return redirect()->route('principal');

@@ -13,20 +13,8 @@
 
 
                    <div class="form-group col-sm-12">
-                       <label class="col-4">nivel:</label>
-                       <select class="form-control col-12" name="nivel" id="nivel" value>
-
-                       @for ($i = 0; $i < 10; $i++)
-                            <option value="{{$i}}" class="form-controle"
-                                @if($aluno->nivel == $i)
-                                    selected
-                                @endif
-                                >{{$i}}
-                            </option>
-
-
-                       @endfor
-                       </select>
+                       <label class="col-4">Idade:</label>
+                    <input type="number" id="nivel" name="nivel" class="nomeInput form-control"/>
                    </div>
 
                    <label>Personagem:</label>

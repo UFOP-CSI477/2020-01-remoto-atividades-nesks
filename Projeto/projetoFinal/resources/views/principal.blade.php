@@ -27,7 +27,6 @@
       <li><a href="{{route('alunos.index')}}" class="nav-link px-2 link-dark">alunos</a></li>
       <li><a href="{{route('alunos.create')}}" class="nav-link px-2 link-dark">Cadastrar aluno</a></li>
       <li><a href="{{route('scores.index')}}" class="nav-link px-2 link-dark">Scores</a></li>
-      <li><a href="{{route('fase1')}}" class="nav-link px-2 link-dark">jogar</a></li>
       <!--
       <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
       <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
@@ -35,8 +34,10 @@
     </ul>
 
     <div class="col-md-3">
+    <div hidden >
       <button type="button" class="btn btn-outline-primary me-2">Login</button>
       <button type="button" class="btn btn-primary">Sign-up</button>
+      </div>
     </div>
   </header>
 

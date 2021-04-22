@@ -40,7 +40,18 @@ class ScoreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+           # dd($request->all());
+        $score = Score::create($request->all());
+        session()->flash('mensagem', "Jogo Iniciado!");
+
+        if($score->nivel==1){
+         return redirect()->route('fase1',[$score->id]);
+        }else if($score->nivel==2){
+            return redirect()->route('fase2',[$score->id]);
+        }else if($score->nivel==3){
+            return redirect()->route('fase3',[$score->id]);
+        }
     }
 
     /**
@@ -51,7 +62,7 @@ class ScoreController extends Controller
      */
     public function show(Score $score)
     {
-       return view('scores.index', ['score' =>$score]);
+        //
     }
 
     /**
@@ -74,7 +85,11 @@ class ScoreController extends Controller
      */
     public function update(Request $request, Score $score)
     {
-        //
+
+        $score->fill($request->all());
+        $score->save();
+        session()->flash('mensagem', "Jogo finalizado!");
+        return redirect()->route('premiacao',[$score->id]);
     }
 
     /**
