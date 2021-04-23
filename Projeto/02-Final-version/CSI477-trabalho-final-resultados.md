@@ -9,6 +9,10 @@
 
 Sistema de desafios para alunos excepcionais que necessitam de uma atenção maior em educação básica.
 
+Contém pequenos desafios para pessoa com deficiência, assim com objetivo da inclusão destas na era digital, na qual em experiência que tive trabalhando como voluntario na APAE-JM, muitos não tem controle nenhum sobre a utilização de teclado e mouse, então esses desafios será com o intuito da familiarização destes com a tecnologia e em contrapartida o auxilio na educação básica, demonstrando letras, números (grande maioria não sabe ler e escrever).
+
+A tela inicial seria um formulário com a configuração dos níveis de desafios, (preenchidas pelo orientador do aluno), assim como o link do vídeo do youtube do desenho que este aluno goste de assistir, para ser exibido assim que finalizar os desafios (como recompensa, a maioria dos alunos da APAE quando vão para a sala de informática apenas pedem para colocar desenho).
+
 
 ### 1. Funcionalidades implementadas
 <!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
