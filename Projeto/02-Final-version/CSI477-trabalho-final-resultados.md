@@ -1,5 +1,5 @@
 # **CSI477-2020-01 - Remoto - Trabalho Final - Resultados**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Felipe Sousa Nunes
 
 --------------
 
